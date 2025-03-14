@@ -79,10 +79,10 @@ _G.packer_plugins = {
     path = "/home/syxm1/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  neovim = {
+  nvim = {
     loaded = true,
-    path = "/home/syxm1/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
+    path = "/home/syxm1/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

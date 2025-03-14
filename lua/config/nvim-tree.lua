@@ -1,28 +1,7 @@
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
-
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
-require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
+vim.opt.termguicolors = true -- optionally enable 24-bit colour
 
 local function my_on_attach(bufnr)
 	local api = require "nvim-tree.api"
@@ -44,7 +23,53 @@ end
 
 -- pass to setup along with your other options
 require("nvim-tree").setup {
-  ---
-  on_attach = my_on_attach,
-  ---
+    sort = {
+        sorter = "case_sensitive",
+    },
+    view = {
+        width = 30,
+        side = "left"
+    },
+    renderer = {
+        highlight_opened_files = "all",
+        highlight_git = true,
+        root_folder_modifier = ":t",
+        indent_markers = {
+            enable = true,
+        },
+        icons = {
+            show = {
+                git = true,
+                folder = true,
+                file = true,
+                folder_arrow = true,
+            },
+            glyphs = {
+                default = "",
+                symlink = "",
+                git = {
+                    unstaged = "",
+                    staged = "✓",
+                    unmerged = "",
+                    renamed = "➜",
+                    untracked = "",
+                    deleted = "",
+                    ignored = "◌",
+                },
+                folder = {
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                },
+            },
+        },
+        highlight_git = true,
+        group_empty = true,
+    },
+    filters = {
+        dotfiles = true,
+    },
+    on_attach = my_on_attach,
 }
