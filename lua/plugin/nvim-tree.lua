@@ -21,14 +21,13 @@ local function my_on_attach(bufnr)
 	vim.keymap.set('n', 'tt', ':NvimTreeToggle<CR>')
 end
 
--- pass to setup along with your other options
 require("nvim-tree").setup {
     sort = {
         sorter = "case_sensitive",
     },
     view = {
         width = 30,
-        side = "left"
+        side = "right"
     },
     renderer = {
         highlight_opened_files = "all",
@@ -69,7 +68,7 @@ require("nvim-tree").setup {
         group_empty = true,
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
     },
     on_attach = my_on_attach,
 }
