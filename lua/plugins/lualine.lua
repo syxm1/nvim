@@ -1,8 +1,8 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	event = "VimEnter", -- Load immediately on startup
+	event = "VimEnter",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons", -- Optional for icons
+		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
 		local colors = {
