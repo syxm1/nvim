@@ -5,6 +5,9 @@ vim.opt.compatible = false
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
 
+-- 24-bit color
+vim.opt.termguicolors = true
+
 -- Line numbers
 vim.opt.nu = true
 
