@@ -40,7 +40,7 @@ return {
 				":lua require('telescope.builtin').find_files({ cwd = '~/.config/nvim' })<CR>"
 			),
 			dashboard.button("l", "  Manage plugins", ":Lazy<CR>"),
-      dashboard.button("s", "  Manage snippets", ":e ~/.config/nvim/lua/snippets<CR>"),
+      dashboard.button("s", "  Manage snippets", ":lua require('telescope.builtin').find_files({ cwd = '~/.config/nvim/lua/snippets' })<CR>"),
 			dashboard.button("q", "󰩈  Quit Neovim", ":qa<CR>"),
 		}
 
