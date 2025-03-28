@@ -1,5 +1,4 @@
 local ls = require("luasnip")
--- some shorthands...
 local s = ls.snippet
 local sn = ls.snippet_node
 local t = ls.text_node
@@ -23,6 +22,28 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 ls.add_snippets("cpp", {
   s(
     "fast",
+    fmt(
+      [[
+      #include <bits/stdc++.h>
+      using namespace std;
+
+      #define int long long
+
+      signed main() {{
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+
+        {}
+      }}
+      ]],
+      { i(1) }
+    )
+  ),
+})
+
+ls.add_snippets("cpp", {
+  s(
+    "matrix",
     fmt(
       [[
       #include <bits/stdc++.h>
