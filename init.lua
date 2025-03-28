@@ -6,3 +6,7 @@ require("config.option")
 require("config.keymap")
 
 require("lazy").setup("plugins")
+
+-- snippets
+require("snippets.cpp")
+require("snippets.tex")
