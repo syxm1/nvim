@@ -61,12 +61,12 @@ return {
         },
       },
       inactive_sections = {
-        lualine_a = { "filename" },
+        lualine_a = {},
         lualine_b = {},
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { "location" },
+        lualine_z = {},
       },
       extensions = {},
     })
