@@ -1,53 +1,64 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	event = "VimEnter",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	event = "VeryLazy",
 	config = function()
-		local colors = {
-			blue = "#80a0ff",
-			cyan = "#79dac8",
-			black = "#080808",
-			white = "#c6c6c6",
-			red = "#ff5189",
-			violet = "#d183e8",
-			grey = "#303030",
-		}
+		local clients_lsp = function()
+			local bufnr = vim.api.nvim_get_current_buf()
 
-		local bubbles_theme = {
-			normal = {
-				a = { fg = colors.black, bg = colors.violet },
-				b = { fg = colors.white, bg = colors.grey },
-				c = { fg = colors.white },
-			},
-			insert = { a = { fg = colors.black, bg = colors.blue } },
-			visual = { a = { fg = colors.black, bg = colors.cyan } },
-			replace = { a = { fg = colors.black, bg = colors.red } },
-			inactive = {
-				a = { fg = colors.white, bg = colors.black },
-				b = { fg = colors.white, bg = colors.black },
-				c = { fg = colors.white },
-			},
-		}
+			local clients = vim.lsp.get_clients()
+			if next(clients) == nil then
+				return ""
+			end
+
+			local c = {}
+			for _, client in pairs(clients) do
+				table.insert(c, client.name)
+			end
+			return " " .. table.concat(c, "|")
+		end
 
 		require("lualine").setup({
 			options = {
-				theme = bubbles_theme,
+				theme = "catppuccin-macchiato",
 				component_separators = "",
 				section_separators = { left = "", right = "" },
+				disabled_filetypes = { "alpha", "Outline" },
 			},
 			sections = {
-				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-				lualine_b = { "filename", "branch" },
+				lualine_a = {
+					{ "mode", separator = { left = " ", right = "" }, icon = "" },
+				},
+				lualine_b = {
+					{
+						"filetype",
+						icon_only = true,
+						padding = { left = 1, right = 0 },
+					},
+					"filename",
+				},
 				lualine_c = {
-					function()
-						return "歳月人を待たず"
-					end,
-				}, -- "Time and tide wait for no man"
-				lualine_x = {},
-				lualine_y = { "encoding", "filetype" },
-				lualine_z = { { "location", separator = { right = "" }, left_padding = 2 } },
+					{
+						"branch",
+						icon = "",
+					},
+					{
+						"diff",
+						symbols = { added = " ", modified = " ", removed = " " },
+						colored = false,
+					},
+				},
+				lualine_x = {
+					{
+						"diagnostics",
+						symbols = { error = " ", warn = " ", info = " ", hint = " " },
+						update_in_insert = true,
+					},
+				},
+				lualine_y = { clients_lsp },
+				lualine_z = {
+					{ "location", separator = { left = "", right = " " }, icon = "" },
+				},
 			},
 			inactive_sections = {
 				lualine_a = { "filename" },
@@ -57,6 +68,7 @@ return {
 				lualine_y = {},
 				lualine_z = { "location" },
 			},
+			extensions = {},
 		})
 	end,
 }
