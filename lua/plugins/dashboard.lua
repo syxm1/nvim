@@ -22,7 +22,7 @@ return {
 
 		local buttons = {
 			dashboard.button("e", "  New file", ":ene <BAR>startinsert<CR>"),
-			dashboard.button("t", "  Show tree", ":NvimTreeOpen<CR>"),
+			dashboard.button("t", "  Show tree", ":Neotree<CR>"),
 			dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
 			dashboard.button("r", "󰏌  Recent files", ":Telescope oldfiles<CR>"),
 			dashboard.button(
