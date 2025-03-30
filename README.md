@@ -4,10 +4,10 @@ This repository contains my personal Neovim configuration.
 
 ## 📸 Screenshots
 <p>
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/dashboard.png" alt="dashboard" width="500">
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/completions.png" alt="completions" width="500">
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/lazy.png" alt="lazy" width="500">
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/tree.png" alt="tree" width="500">
+   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/dashboard.png" alt="dashboard" width="300">
+   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/completions.png" alt="completions" width="300">
+   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/lazy.png" alt="lazy" width="300">
+   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/tree.png" alt="tree" width="300">
 </p>
 
 ## ✨ Features
