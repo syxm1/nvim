@@ -1,19 +1,13 @@
 return {
 	{
 		"williamboman/mason.nvim",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim"
+    },
 		event = "VimEnter",
 		config = function()
 			require("mason").setup()
-		end,
-	},
-
-	{
-		"williamboman/mason-lspconfig.nvim",
-		event = "VimEnter",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {},
-			})
+      require("mason-lspconfig").setup()
 		end,
 	},
 
@@ -34,25 +28,6 @@ return {
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-		end,
-	},
-
-	{
-		"nvimtools/none-ls.nvim",
-		event = "VimEnter",
-		config = function()
-			local null = require("null-ls")
-
-			null.setup({
-				sources = {
-					null.builtins.formatting.stylua,
-					null.builtins.formatting.prettier,
-					null.builtins.formatting.black,
-					null.builtins.formatting.clang_format,
-				},
-			})
-
-			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 		end,
 	},
 }
