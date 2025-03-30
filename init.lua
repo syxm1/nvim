@@ -1,4 +1,3 @@
--- load all local configs
 local function load_configs()
 	local configs_path = vim.fn.stdpath("config") .. "/lua/configs"
 	local config_files = vim.fn.glob(configs_path .. "/*.lua", false, true)
@@ -21,7 +20,6 @@ end
 
 load_lsp()
 
--- load all snippets
 local function load_snippets()
 	local snippets_path = vim.fn.stdpath("config") .. "/lua/snippets"
 	local snippet_files = vim.fn.glob(snippets_path .. "/*.lua", false, true)
