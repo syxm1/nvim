@@ -1,6 +1,6 @@
 # syxm1's Neovim Configuration 🚀
 
-This repository contains my personal Neovim configuration. I personally use Neovim 0.11
+This repository contains my personal Neovim configuration.
 
 ## 📸 Screenshots
 <p>
