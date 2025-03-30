@@ -18,5 +18,5 @@ return {
   })
   vim.notify = nvim_notify
   end,
-},
+}
 
