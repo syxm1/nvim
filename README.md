@@ -3,6 +3,10 @@
 This repository contains my personal Neovim configuration. I personally use Neovim 0.11
 
 ## 📸 Screenshots
+![dashboard](https://github.com/syxm1/nvim/blob/master/screenshots/dashboard.png)
+![completions](https://github.com/syxm1/nvim/blob/master/screenshots/completions.png)
+![lazy](https://github.com/syxm1/nvim/blob/master/screenshots/lazy.png)
+![tree](https://github.com/syxm1/nvim/blob/master/screenshots/tree.png)
 
 ## ✨ Features
 
