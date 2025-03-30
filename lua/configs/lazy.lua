@@ -44,6 +44,6 @@ require("lazy").setup(get_plugin_specs(), {
   ui = {
     size = { width = 0.8, heigth = 0.8 },
     border = "rounded",
-    title = "Lazy",
+    title = "",
   },
 })
