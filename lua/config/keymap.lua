@@ -13,9 +13,3 @@ vim.keymap.set("x", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true
 -- scroll
 vim.keymap.set("n", "<C-l>", "zl", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-h>", "zh", { noremap = true, silent = true })
-
--- nvim-tree
-vim.keymap.set("n", "<leader>e", ":NvimTreeOpen<CR>", { desc = "Toggle File Tree" })
-
--- alpha
-vim.keymap.set("n", "<C-a>", ":Alpha<CR>", { noremap = true, silent = true })

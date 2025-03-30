@@ -18,6 +18,8 @@ return {
 			api.config.mappings.default_on_attach(bufnr)
 		end
 
+    vim.keymap.set("n", "<leader>e", ":NvimTreeOpen<CR>", { desc = "Toggle File Tree" })
+
 		require("nvim-tree").setup({
 			sort = { sorter = "case_sensitive" },
 			view = {

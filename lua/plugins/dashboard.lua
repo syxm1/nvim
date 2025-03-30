@@ -45,6 +45,8 @@ return {
 
 		alpha.setup(dashboard.config)
 
+    vim.keymap.set("n", "<C-a>", ":Alpha<CR>", { noremap = true, silent = true })
+
 		vim.cmd([[
       autocmd User AlphaReady set laststatus=0 | set noruler
       autocmd BufUnload <buffer> set laststatus=3 | set ruler
