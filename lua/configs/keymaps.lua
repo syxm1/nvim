@@ -1,3 +1,6 @@
+-- global leader
+vim.g.mapleader = " "
+
 -- curly bracket auto-complete
 vim.keymap.set("i", "{<CR>", "{<CR>}<Esc>O", { noremap = true, silent = true })
 vim.keymap.set("i", "{}", "{}", { noremap = true, silent = true })
