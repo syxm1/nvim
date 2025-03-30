@@ -27,7 +27,7 @@ ls.add_snippets("cpp", {
       #include <bits/stdc++.h>
       using namespace std;
 
-      #define int long long
+      #define int int64_t
 
       signed main() {{
         ios_base::sync_with_stdio(false);
@@ -42,19 +42,19 @@ ls.add_snippets("cpp", {
 })
 
 ls.add_snippets("cpp", {
-  s(
-    "policy-based-data-structures",
-    fmt (
-      [[
-      #include<ext/pb_ds/assoc_container.hpp>
-      #include<ext/pb_ds/tree_policy.hpp>
+	s(
+		"policy-based-data-structures",
+		fmt(
+			[[
+      #include <ext/pb_ds/assoc_container.hpp>
+      #include <ext/pb_ds/tree_policy.hpp>
       using namespace __gnu_pbds;
 
-      template<typename T> using ordered_set =
+      template <typename T> using ordered_set =
           tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-      template<typename T> using ordered_multiset =
-          tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
-      template<typename T> using decreasing_ordered_set =
+      template <typename T> using ordered_multiset =
+          tree <T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
+      template <typename T> using decreasing_ordered_set =
           tree<T, null_type, greater<T>, rb_tree_tag, tree_order_statistics_node_update>;
       template<typename T> using decreasing_ordered_multiset =
           tree<T, null_type, greater_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
@@ -64,16 +64,16 @@ ls.add_snippets("cpp", {
 
       // if you defined anything, please put below this to prevent error
       ]],
-      {}
-    )
-  )
+			{}
+		)
+	),
 })
 
 ls.add_snippets("cpp", {
-  s(
-    "matrix-implementation",
-    fmt (
-      [[
+	s(
+		"matrix-implementation",
+		fmt(
+			[[
       template <typename T> struct matrix {{
         // const int mod = 1e9+7;
         vector<vector<T>> M;
@@ -219,9 +219,9 @@ ls.add_snippets("cpp", {
         }}
       }};
       ]],
-      {}
-    )
-  )
+			{}
+		)
+	),
 })
 
 ls.add_snippets("cpp", {

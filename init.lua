@@ -10,6 +10,17 @@ end
 
 load_configs()
 
+local function load_lsp()
+	local lsp_path = vim.fn.stdpath("config") .. "/lua/configs/lsp"
+	local lsp_files = vim.fn.glob(lsp_path .. "/*.lua", false, true)
+	for _, file in ipairs(lsp_files) do
+		local filename = vim.fn.fnamemodify(file, ":t:r")
+		require("configs.lsp." .. filename)
+	end
+end
+
+load_lsp()
+
 -- load all snippets
 local function load_snippets()
 	local snippets_path = vim.fn.stdpath("config") .. "/lua/snippets"

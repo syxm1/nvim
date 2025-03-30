@@ -15,11 +15,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- import all plugin folders recursively
+-- load all folder under lua/plugins recursively
 local function get_plugin_specs(base_path)
 	base_path = base_path or vim.fn.stdpath("config") .. "/lua/plugins"
-
 	local plugin_specs = {}
+
 	local plugin_dirs = vim.fn.glob(base_path .. "/*/", false, true)
 
 	for _, dir in ipairs(plugin_dirs) do

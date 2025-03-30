@@ -1,13 +1,13 @@
 return {
 	{
 		"williamboman/mason.nvim",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim"
-    },
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
 		event = "VimEnter",
 		config = function()
 			require("mason").setup()
-      require("mason-lspconfig").setup()
+			require("mason-lspconfig").setup()
 		end,
 	},
 
@@ -15,15 +15,6 @@ return {
 		"neovim/nvim-lspconfig",
 		event = "VimEnter",
 		config = function()
-			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-			lspconfig.lua_ls.setup({ capabilities = capabilities })
-			lspconfig.ts_ls.setup({ capabilities = capabilities })
-			lspconfig.clangd.setup({ capabilities = capabilities })
-			lspconfig.pylyzer.setup({ capabilities = capabilities })
-			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
