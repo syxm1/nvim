@@ -48,5 +48,6 @@ require("lazy").setup(get_plugin_specs(), {
 		size = { width = 0.8, heigth = 0.8 },
 		border = "rounded",
 		title = "",
+		icons = {},
 	},
 })
