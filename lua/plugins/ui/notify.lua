@@ -13,7 +13,7 @@ return {
 				notification = "%T",
 				notification_history = "%FT%T",
 			},
-			timeout = 2000,
+			timeout = 3000,
 			top_down = true,
 		})
 		vim.notify = nvim_notify
