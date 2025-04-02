@@ -35,6 +35,6 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>e", ":Neotree<CR>", {})
+		vim.keymap.set("n", "<leader>e", "<cmd>Neotree reveal<CR>", {})
 	end,
 }

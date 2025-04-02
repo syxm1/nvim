@@ -2,12 +2,13 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
+
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
-			"nvim-telescope/telescope-ui-select.nvim",
 			build = "make",
 		},
+
 		config = function()
 			local telescope = require("telescope")
 			local builtin = require("telescope.builtin")
@@ -40,6 +41,7 @@ return {
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 		end,
 	},
+
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
 		config = function()
