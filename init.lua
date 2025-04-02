@@ -1,4 +1,4 @@
-local function load_configs()
+local function load_config_files()
 	local configs_path = vim.fn.stdpath("config") .. "/lua/configs"
 	local config_files = vim.fn.glob(configs_path .. "/*.lua", false, true)
 	for _, file in ipairs(config_files) do
@@ -7,26 +7,15 @@ local function load_configs()
 	end
 end
 
-load_configs()
+load_config_files()
 
-local function load_lsp()
-	local lsp_path = vim.fn.stdpath("config") .. "/lua/configs/lsp"
-	local lsp_files = vim.fn.glob(lsp_path .. "/*.lua", false, true)
-	for _, file in ipairs(lsp_files) do
-		local filename = vim.fn.fnamemodify(file, ":t:r")
-		require("configs.lsp." .. filename)
-	end
-end
-
-load_lsp()
-
-local function load_snippets()
-	local snippets_path = vim.fn.stdpath("config") .. "/lua/snippets"
-	local snippet_files = vim.fn.glob(snippets_path .. "/*.lua", false, true)
+local function load_snippet_files()
+	local snippet_path = vim.fn.stdpath("config") .. "/lua/snippets"
+	local snippet_files = vim.fn.glob(snippet_path .. "/*.lua", false, true)
 	for _, file in ipairs(snippet_files) do
 		local filename = vim.fn.fnamemodify(file, ":t:r")
-		require("snippets." .. filename)
+		require("snippets" .. filename)
 	end
 end
 
-load_snippets()
+load_snippet_files()
