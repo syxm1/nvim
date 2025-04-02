@@ -14,7 +14,7 @@ local function load_snippet_files()
 	local snippet_files = vim.fn.glob(snippet_path .. "/*.lua", false, true)
 	for _, file in ipairs(snippet_files) do
 		local filename = vim.fn.fnamemodify(file, ":t:r")
-		require("snippets" .. filename)
+		require("snippets." .. filename)
 	end
 end
 
