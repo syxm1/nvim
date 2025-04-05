@@ -20,10 +20,10 @@ return {
 		}
 
 		local buttons = {
-			dashboard.button("e", "  New file", ":ene <BAR>startinsert<CR>"),
+			dashboard.button("e", "  New file", ":ene<CR>"),
 			dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
-			dashboard.button("r", "󰏌  Recent files", ":Telescope oldfiles<CR>"),
-			dashboard.button("l", "  Manage plugins", ":Lazy<CR>"),
+			dashboard.button("r", "󰏌  Recent", ":Telescope oldfiles<CR>"),
+			dashboard.button("l", "  Lazy", ":Lazy<CR>"),
 			dashboard.button("q", "󰩈  Quit Neovim", ":qa<CR>"),
 		}
 

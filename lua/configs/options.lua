@@ -1,11 +1,10 @@
 local opt = vim.opt
 local cmd = vim.cmd
 
-opt.compatible = false
-
 cmd("filetype plugin indent on")
 cmd("syntax enable")
 
+opt.compatible = false
 opt.nu = true
 
 opt.backup = false
