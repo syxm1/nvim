@@ -9,7 +9,6 @@ return {
 			python = { "pylint" },
 			markdown = { "vale" },
 			latex = { "vale" },
-			lua = { "luacheck" },
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
 			rust = { "bacon" },
