@@ -41,6 +41,7 @@ return {
 
 		harpoon:extend(harpoon_extensions.builtins.highlight_current_file())
 
+    vim.keymap.set("n", "<leader>h", "", { desc = "Harpoon" })
 		vim.keymap.set("n", "<leader>ha", function()
 			harpoon:list():add()
 		end, { desc = "Add current buffer to the list" })
