@@ -3,7 +3,7 @@ return {
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		opts = {
-			preset = "helix",
+			preset = "modern",
 			notify = true,
 			plugins = {
 				marks = true, -- shows a list of your marks on ' and `
@@ -26,7 +26,7 @@ return {
 				title = false,
 			},
 			layout = {
-				width = 20,
+				width = 15,
 			},
 		},
 		keys = {
