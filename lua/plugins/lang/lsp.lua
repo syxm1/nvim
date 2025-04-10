@@ -36,8 +36,8 @@ return {
 
           map("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
           map("<leader>l", "", "Language Server")
-          map("<leader>lr", vim.lsp.buf.rename, "[R]e[n]ame")
-          map("<leader>lc", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
+          map("<leader>lr", vim.lsp.buf.rename, "Rename")
+          map("<leader>la", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
         end,
       })
     end,
