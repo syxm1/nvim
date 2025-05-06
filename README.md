@@ -2,14 +2,6 @@
 
 This repository contains my personal Neovim configuration.
 
-## 📸 Screenshots
-<p>
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/dashboard.png" alt="dashboard" width="40%">
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/completions.png" alt="completions" width="40%">
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/lazy.png" alt="lazy" width="40%">
-   <img src="https://github.com/syxm1/nvim/blob/master/screenshots/tree.png" alt="tree" width="40%">
-</p>
-
 ## ✨ Features
 
 * **Extensible:** Easy to customize and add new plugins using `lazy.nvim`.
