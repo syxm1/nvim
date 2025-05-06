@@ -21,7 +21,7 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 
 ls.add_snippets("cpp", {
 	s(
-		"fast",
+		"cp",
 		fmt(
 			[[
       #include <bits/stdc++.h>
