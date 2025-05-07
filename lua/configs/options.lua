@@ -18,7 +18,6 @@ opt.shiftwidth = 0
 opt.softtabstop = 0
 
 opt.termguicolors = true
-opt.cursorline = true
 opt.wrap = false
 opt.showmode = false
 opt.showmatch = true
